@@ -44,7 +44,9 @@ void insertMap(HashMap * map, char * key, void * value)
   long iniciarhash = hash(key, map->capacity);
   while (map->buckets[iniciarhash] && !0) 
   {
-        if (map->buckets[iniciarhash]->key && strcmp(map->buckets[iniciarhash]->key, key) == 0) return;
+    if (map->buckets[iniciarhash]->key && strcmp(map->buckets[iniciarhash]->key, key) == 0) return;
+    iniciarhash = (iniciarhash + 1) % map->capacity;
+    if(iniciarhash == hash(key, map->capacity)) return
   }
 }
 

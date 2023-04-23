@@ -40,3 +40,18 @@ Sun 23 Apr 2023 06:06:49 PM UTC:
  tests:  1|5
 total_score: 10/70
 1dc765c
+Sun 23 Apr 2023 06:09:20 PM UTC: 
+ hashmap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:50:3: error: expected expression before ‘}’ token
+   50 |   }
+      |   ^
+hashmap.c:50:3: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+hashmap.c:42:6: note: declared here
+   42 | void insertMap(HashMap * map, char * key, void * value)
+      |      ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+f5a97d3
