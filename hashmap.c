@@ -46,12 +46,14 @@ void insertMap(HashMap * map, char * key, void * value)
   {
     if (map->buckets[indice]->key && strcmp(map->buckets[indice]->key, key) == 0) return;
     indice = (indice + 1) % map->capacity;
+    if(map->buckets[indice] != NULL)
+    {    
+      Pair *newPair = createPair(key, value);
+      map->buckets[indice] = newPair;
+      map->size++;
+      map->current = indice;
+    }
   }
-  
-  Pair *newPair = createPair(key, value);
-  map->buckets[indice] = newPair;
-  map->size++;
-  map->current = hash;
 }
 
 void enlarge(HashMap * map) {
