@@ -34,3 +34,9 @@ hashmap.c:44:8: error: unused variable ‘inicialhash’ [-Werror=unused-variabl
 cc1: all warnings being treated as errors
 Compilation failed
 38c65ad
+Sun 23 Apr 2023 06:06:49 PM UTC: 
+ hashmap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+ tests:  1|5
+total_score: 10/70
+1dc765c

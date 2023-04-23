@@ -41,10 +41,10 @@ int is_equal(void* key1, void* key2){
 
 void insertMap(HashMap * map, char * key, void * value) 
 {
-  long inicialhash = hash(key, map->capacity);
-  while (map->buckets[hash] && !0) 
+  long iniciarhash = hash(key, map->capacity);
+  while (map->buckets[iniciarhash] && !0) 
   {
-        if (map->buckets[hash]->key && strcmp(map->buckets[hash]->key, key) == 0) return;
+        if (map->buckets[iniciarhash]->key && strcmp(map->buckets[iniciarhash]->key, key) == 0) return;
   }
 }
 
