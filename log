@@ -253,3 +253,16 @@ hashmap.c:62:63: error: expected ‘;’ before ‘map’
       |   ~~~                                                          
 Compilation failed
 7085f9a
+Sun 23 Apr 2023 08:27:56 PM UTC: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:62:63: error: expected ‘;’ before ‘map’
+   62 |   map->buckets = (Pair**) calloc(map->capacity, sizeof(Pair*))
+      |                                                               ^
+      |                                                               ;
+   63 |   map->size = 0;
+      |   ~~~                                                          
+Compilation failed
+db7ac92
