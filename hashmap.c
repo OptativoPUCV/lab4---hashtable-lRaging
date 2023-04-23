@@ -78,6 +78,7 @@ void eraseMap(HashMap * map,  char * key)
     if (map->buckets[indice]->key != NULL && strcmp(map->buckets[indice]->key, key) == 0) 
     {
       map->buckets[indice]->key = NULL;
+      map->size--;
       
     }
     indice = (indice + 1) % map->capacity; 
