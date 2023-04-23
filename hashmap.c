@@ -42,7 +42,7 @@ int is_equal(void* key1, void* key2){
 void insertMap(HashMap * map, char * key, void * value) 
 {
   long indice = hash(key, map->capacity);
-  while (map->buckets[indice] && map->buckets[index]->key != NULL) 
+  while (map->buckets[indice] && map->buckets[indice]->key != NULL) 
   {
     if (map->buckets[indice]->key && strcmp(map->buckets[indice]->key, key) == 0) return;
     indice = (indice + 1) % map->capacity;
