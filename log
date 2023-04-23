@@ -136,3 +136,9 @@ Sun 23 Apr 2023 07:30:50 PM UTC:
  tests:  8|3
 total_score: 40/70
 e8df1c6
+Sun 23 Apr 2023 07:47:32 PM UTC: 
+ hashmap.c | 16 ++++++++++++++--
+ 1 file changed, 14 insertions(+), 2 deletions(-)
+ tests:  8|3
+total_score: 40/70
+203d24f
