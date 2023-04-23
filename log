@@ -14,3 +14,23 @@ Sun 23 Apr 2023 05:45:22 PM UTC:
  tests:  1|5
 total_score: 10/70
 88bcacd
+Sun 23 Apr 2023 06:06:31 PM UTC: 
+ hashmap.c | 20 ++++++++++++--------
+ 1 file changed, 12 insertions(+), 8 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:45:22: error: array subscript is not an integer
+   45 |   while (map->buckets[hash] && !0)
+      |                      ^
+hashmap.c:47:25: error: array subscript is not an integer
+   47 |         if (map->buckets[hash]->key && strcmp(map->buckets[hash]->key, key) == 0) return;
+      |                         ^
+hashmap.c:47:59: error: array subscript is not an integer
+   47 |         if (map->buckets[hash]->key && strcmp(map->buckets[hash]->key, key) == 0) return;
+      |                                                           ^
+hashmap.c:44:8: error: unused variable ‘inicialhash’ [-Werror=unused-variable]
+   44 |   long inicialhash = hash(key, map->capacity);
+      |        ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+38c65ad
