@@ -201,3 +201,16 @@ Sun 23 Apr 2023 08:05:42 PM UTC:
  tests:  16|1
 total_score: 60/70
 edeb52e
+Sun 23 Apr 2023 08:18:51 PM UTC: 
+ hashmap.c | 15 ++++++++++++++-
+ 1 file changed, 14 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:63:63: error: expected ‘;’ before ‘map’
+   63 |   map->buckets = (Pair**) calloc(map->capacity, sizeof(Pair*))
+      |                                                               ^
+      |                                                               ;
+   64 |   map->size = 0;
+      |   ~~~                                                          
+Compilation failed
+9207b81

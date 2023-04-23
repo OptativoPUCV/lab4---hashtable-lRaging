@@ -54,8 +54,21 @@ void insertMap(HashMap * map, char * key, void * value)
   map->current = indice;
 }
 
-void enlarge(HashMap * map) {
-    enlarge_called = 1; //no borrar (testing purposes)
+void enlarge(HashMap * map) 
+{
+  enlarge_called = 1; //no borrar (testing purposes)
+  if(map==NULL) return;
+  Pair **old_buckets = map->buckets;
+  map->capacity *= 2;
+  map->buckets = (Pair**) calloc(map->capacity, sizeof(Pair*))
+  map->size = 0;
+  for (int indice = 0; indice < map->capacity/2; indice++) 
+  {
+    if (old_buckets[indice] != NULL) 
+    {
+      insertMap(map, old_buckets[indice]->key, old_buckets[indice]->value);
+    }
+  }
 }
 
 
