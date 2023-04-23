@@ -68,7 +68,6 @@ void enlarge(HashMap * map)
       insertMap(map, old_buckets[indice]->key, old_buckets[indice]->value);
     }
   }
-  free(old_buckets);
 }
 
 
