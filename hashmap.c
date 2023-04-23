@@ -46,7 +46,6 @@ void insertMap(HashMap * map, char * key, void * value)
   {
     if (map->buckets[indice]->key && strcmp(map->buckets[indice]->key, key) == 0) return;
     indice = (indice + 1) % map->capacity;
-    if(indice == hash(key, map->capacity)) return;
   }
   
   Pair *newPair = createPair(key, value);
