@@ -154,3 +154,20 @@ Sun 23 Apr 2023 07:52:02 PM UTC:
  tests:  11|2
 total_score: 50/70
 f853392
+Sun 23 Apr 2023 07:59:02 PM UTC: 
+ hashmap.c | 14 +++++++++++++-
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:111:19: error: expected ‘;’ before ‘while’
+  111 |   map->current = 0
+      |                   ^
+      |                   ;
+  112 |   while (map->buckets[map->current] == NULL || map->buckets[map->current]->key == NULL)
+      |   ~~~~~            
+hashmap.c:124:1: error: control reaches end of non-void function [-Werror=return-type]
+  124 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+208b1af

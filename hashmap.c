@@ -80,7 +80,7 @@ void eraseMap(HashMap * map,  char * key)
       map->buckets[indice]->key = NULL;
       map->current = indice;
       map->size--;
-      
+      break;
     }
     indice = (indice + 1) % map->capacity; 
   }
@@ -107,8 +107,20 @@ Pair * searchMap(HashMap * map,  char * key)
 
 Pair * firstMap(HashMap * map) 
 {
-
-    return NULL;
+  if(map==NULL) return NULL;
+  map->current = 0
+  while (map->buckets[map->current] == NULL || map->buckets[map->current]->key == NULL)
+  {
+      if(map->buckets[map->current]!=NULL && map->buckets[map->current]->key !=NULL)
+      {
+        map->current = map->current;
+        return map->buckets[map->current];
+      }
+    map->current++;
+  }
+    
+    
+  return NULL;
 }
 
 Pair * nextMap(HashMap * map) {
